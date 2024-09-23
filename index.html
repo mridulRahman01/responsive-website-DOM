@@ -3,7 +3,14 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
     <title>Assignment-5</title>
+
     <script src="https://cdn.tailwindcss.com"></script>
     <link
       href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css"
@@ -11,10 +18,201 @@
       type="text/css"
     />
     <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      .font-lexend {
+        font-family: "Lexend", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 500;
+        font-style: normal;
+      }
+      .font-lexend-normal {
+        font-family: "Lexend", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 700;
+        font-style: normal;
+      }
+      .font-lexend-semi {
+        font-family: "Lexend", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 600;
+        font-style: normal;
+      }
+      .font-lexend-small {
+        font-family: "Lexend", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 300;
+        font-style: normal;
+      }
+    </style>
   </head>
-  <body>
+  <body class="font-lexend">
     <main>
-      <nav></nav>
+      <section>
+        <nav class="bg-rose-50 lg:h-[90px]">
+          <div class="navbar">
+            <div class="navbar-start">
+              <div class="dropdown"></div>
+              <a class="btn text-xl ml-[20px] lg:ml-[50px] bg-lime-500">Blog</a>
+            </div>
+            <div class="hidden lg:flex">
+              <a class="flex gap-2"
+                ><img src="/assets/logo.png" alt="Loading" />
+                <span class="lg:w-[188px] lg:text-sm mt-[20px]"
+                  >Donate Bangladesh</span
+                ></a
+              >
+            </div>
+
+            <div class="navbar-end mr-[20px] lg:mr-[50px]">
+              <a class="flex gap-2">
+                <img src="/assets/coin.png" alt="Loading" />
+                <span class="">10000 BDT</span>
+              </a>
+            </div>
+          </div>
+        </nav>
+        <div class="mt-[40px] ml-[138px] lg:ml-[700px] lg:mt-[120px]">
+          <button class="btn bg-lime-400 justify-center">Donation</button>
+          <button class="btn">History</button>
+        </div>
+      </section>
+      <!-- Sticky section ended -->
+      <section>
+        <div
+          class="hero border mt-[40px] mb-[40px] lg:w-[1100px] lg:ml-[300px] lg:mb-[40px] lg:mt-[50px] rounded-lg lg:h-[450px]"
+        >
+          <div class="hero-content flex-col lg:flex-row">
+            <img
+              src="/assets/noakhali.png"
+              class="max-w rounded-lg shadow-2xl"
+            />
+
+            <div>
+              <div>
+                <a class="btn"
+                  ><img src="/assets/coin.png" alt="Loading" />0 BDT</a
+                >
+              </div>
+              <h1 class="text-xl font-bold lg:mt-[15px]">
+                Donate for Flood at Noakhali, Bangladesh
+              </h1>
+              <p class="py-6 font-lexend-small text-sm">
+                The recent floods in Noakhali have caused significant damage to
+                homes infrastructure. Your donation will help provide essential
+                supplies and to those affected by this disaster. Every
+                contribution, big or small, makes difference. Please join us in
+                supporting the relief efforts and making a positive impact on
+                the lives of those in need.
+              </p>
+
+              <div class="form-control lg:mt-[1px]">
+                <label class="label"> </label>
+                <input
+                  type="text"
+                  placeholder="Write Donation Amount"
+                  class="input input-bordered"
+                  required
+                />
+              </div>
+              <div class="form-control mt-6 font-lexend-semi text-xl">
+                <button class="btn bg-lime-500">Donate Now</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Card-1 ended -->
+        <div
+          class="hero border mb-[40px] lg:w-[1100px] lg:ml-[300px] lg:mb-[40px] lg:mt-[50px] rounded-lg lg:h-[450px]"
+        >
+          <div class="hero-content flex-col lg:flex-row">
+            <img
+              class="lg:h-[400px]"
+              src="/assets/feni.png"
+              class="max-w rounded-lg shadow-2xl"
+            />
+
+            <div>
+              <div>
+                <a class="btn"
+                  ><img src="/assets/coin.png" alt="Loading" />0 BDT</a
+                >
+              </div>
+              <h1 class="text-xl font-bold lg:mt-[15px]">
+                Donate for Flood Relief in Feni,Bangladesh
+              </h1>
+              <p class="py-6 font-lexend-small text-sm">
+                The recent floods in Feni have caused significant damage to
+                homes infrastructure. Your donation will help provide essential
+                supplies and to those affected by this disaster. Every
+                contribution, big or small, makes difference. Please join us in
+                supporting the relief efforts and making a positive impact on
+                the lives of those in need.
+              </p>
+
+              <div class="form-control lg:mt-[1px]">
+                <label class="label"> </label>
+                <input
+                  type="text"
+                  placeholder="Write Donation Amount"
+                  class="input input-bordered"
+                  required
+                />
+              </div>
+              <div class="form-control mt-6 font-lexend-semi text-xl">
+                <button class="btn bg-lime-500">Donate Now</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Card-2 ended -->
+        <div
+          class="hero border mb-[40px] lg:w-[1100px] lg:ml-[300px] lg:mb-[40px] lg:mt-[50px] rounded-lg lg:h-[450px]"
+        >
+          <div class="hero-content flex-col lg:flex-row">
+            <img
+              class="lg:h-[400px]"
+              src="/assets/quota-protest.png"
+              class="max-w rounded-lg shadow-2xl"
+            />
+
+            <div>
+              <div>
+                <a class="btn"
+                  ><img src="/assets/coin.png" alt="Loading" />0 BDT</a
+                >
+              </div>
+              <h1 class="text-xl font-bold lg:mt-[15px]">
+                Aid for Injured in the Quota Movement
+              </h1>
+              <p class="py-6 font-lexend-small text-sm">
+                The recent Quota movement has resulted in numerous injuries and
+                significant hardship for many individuals. Your support is
+                crucial in providing medical assistance, rehabilitation, and
+                necessary supplies to those affected. By contributing, you help
+                ensure that injured individuals receive the care and support
+                they need during this challenging time. Every donation plays a
+                vital role in alleviating their suffering and aiding in their
+                recovery. Please consider making a donation to support these
+                brave individuals in their time of need.
+              </p>
+
+              <div class="form-control lg:mt-[1px]">
+                <label class="label"> </label>
+                <input
+                  type="text"
+                  placeholder="Write Donation Amount"
+                  class="input input-bordered"
+                  required
+                />
+              </div>
+              <div class="form-control mt-6 font-lexend-semi text-xl">
+                <button class="btn bg-lime-500">Donate Now</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- card-3 ended -->
+      </section>
     </main>
   </body>
 </html>
