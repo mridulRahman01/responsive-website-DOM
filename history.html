@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <title>Assignment-5</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      .font-lexend {
+        font-family: "Lexend", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 500;
+        font-style: normal;
+      }
+      .font-lexend-normal {
+        font-family: "Lexend", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 700;
+        font-style: normal;
+      }
+      .font-lexend-semi {
+        font-family: "Lexend", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 600;
+        font-style: normal;
+      }
+      .font-lexend-small {
+        font-family: "Lexend", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 300;
+        font-style: normal;
+      }
+    </style>
+  </head>
+  <body class="font-lexend">
+    <main>
+      <section>
+        <nav class="bg-rose-50 lg:h-[90px]">
+          <div class="navbar">
+            <div class="navbar-start">
+              <div class="dropdown"></div>
+              <a
+                href="home.html"
+                class="btn text-xl ml-[20px] lg:ml-[50px] bg-lime-500"
+                >Blog</a
+              >
+            </div>
+            <div class="hidden lg:flex">
+              <a class="flex gap-2"
+                ><img src="/assets/logo.png" alt="Loading" />
+                <span class="lg:w-[188px] lg:text-sm mt-[20px]"
+                  >Donate Bangladesh</span
+                ></a
+              >
+            </div>
+
+            <div class="navbar-end mr-[20px] lg:mr-[50px]">
+              <a class="flex gap-2">
+                <img src="/assets/coin.png" alt="Loading" />
+                <span id="main-money" class="">10000 BDT</span>
+              </a>
+            </div>
+          </div>
+        </nav>
+      </section>
+    </main>
+    <section class="lg:h-[705]">
+      <div
+        class="mt-[40px] ml-[138px] lg:ml-[700px] lg:mt-[60px] lg:mb-[514px]"
+      >
+        <a href="index.html"
+          ><button id="donation-btn" class="btn justify-center lg:mr-[40px]">
+            Donation
+          </button></a
+        >
+        <a href="history.html"
+          ><button id="history-btn" class="btn bg-lime-400">History</button></a
+        >
+      </div>
+    </section>
+    <footer class="bg-orange-200 lg:h-[100px]">
+      <h1 class="flex justify-center lg:mt-[20px]"></h1>
+    </footer>
+  </body>
+</html>

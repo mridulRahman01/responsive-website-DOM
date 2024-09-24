@@ -3,6 +3,17 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    />
+
     <title>Homepage</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link
@@ -11,6 +22,127 @@
       type="text/css"
     />
     <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      .font-lexend {
+        font-family: "Lexend", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 500;
+        font-style: normal;
+      }
+    </style>
   </head>
-  <body></body>
+  <body>
+    <nav class="bg-rose-50 lg:h-[90px] font-lexend">
+      <div class="navbar">
+        <div class="navbar-start">
+          <div class="dropdown"></div>
+          <a
+            href="index.html"
+            class="btn text-xl ml-[20px] lg:ml-[50px] bg-lime-500"
+            >Home</a
+          >
+        </div>
+        <div class="hidden lg:flex">
+          <a class="flex gap-2"
+            ><img src="/assets/logo.png" alt="Loading" />
+            <span class="lg:w-[188px] lg:text-sm mt-[20px]"
+              >Donate Bangladesh</span
+            ></a
+          >
+        </div>
+
+        <div class="navbar-end mr-[20px] lg:mr-[50px]">
+          <a class="flex gap-2">
+            <img src="/assets/coin.png" alt="Loading" />
+            <span class="">10000 BDT</span>
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div
+      id="faqs"
+      class="container text-5xl leading-normal sm:font-semibold max-w-7xl lg:mt-[100px] lg:ml-[150px]"
+    >
+      <h2>Important FAQs <i class="fa-solid fa-question"></i></h2>
+      <div class="grid grid-cols-1 lg:grid-cols-1 mt-6 gap-2">
+        <div class="group rounded-xl border border-gray-200 bg-gray-50 p-6">
+          <dt class="flex justify-between items-center" aria-controls="faq-1">
+            <p class="font-semibold text-lg">
+              What is the Document Object Model(DOM)?
+            </p>
+            <i
+              class="fa-solid fa-caret-up -rotate-180 hover:cursor-pointer"
+            ></i>
+          </dt>
+          <dd id="faq-1" class="text-lg font-light mt-6 hidden">
+            <p>
+              The DOM (Document Object Model) is a programming interface for web
+              documents. It represents the structure of a webpage as a
+              hierarchical tree of elements, enabling scripts to dynamically
+              access, manipulate, and update the content, structure, and style
+              of a website in real time using languages like JavaScript.
+            </p>
+          </dd>
+        </div>
+        <div class="group rounded-xl border border-gray-200 bg-gray-50 p-6">
+          <dt class="flex justify-between items-center" aria-controls="faq-2">
+            <p class="font-semibold text-lg">
+              How do you select an element in DOM?
+            </p>
+            <i
+              class="fa-solid fa-caret-up -rotate-180 hover:cursor-pointer"
+            ></i>
+          </dt>
+          <dd id="faq-2" class="text-lg font-light mt-6 hidden">
+            <p>
+              To select an element in the DOM, use methods like
+              document.getElementById(), document.querySelector(), or
+              document.getElementsByClassName() in JavaScript.
+            </p>
+          </dd>
+        </div>
+        <div class="group rounded-xl border border-gray-200 bg-gray-50 p-6">
+          <dt class="flex justify-between items-center" aria-controls="faq-3">
+            <p class="font-semibold text-lg">
+              What is event delegation in the context of DOM, and why its
+              useful?
+            </p>
+            <i
+              class="fa-solid fa-caret-up -rotate-180 hover:cursor-pointer"
+            ></i>
+          </dt>
+          <dd id="faq-3" class="text-lg font-light mt-6 hidden">
+            <p>
+              Event delegation in the DOM is a technique where a single event
+              listener is added to a parent element instead of multiple child
+              elements. This listener takes advantage of event bubbling to
+              handle events from child elements, improving performance and
+              simplifying code management, especially for dynamically added
+              elements.
+            </p>
+          </dd>
+        </div>
+        <div class="group rounded-xl border border-gray-200 bg-gray-50 p-6">
+          <dt class="flex justify-between items-center" aria-controls="faq-4">
+            <p class="font-semibold text-lg">
+              How do you manipulate an elemtent's attribute and styles using
+              DOM?
+            </p>
+            <i
+              class="fa-solid fa-caret-up -rotate-180 hover:cursor-pointer"
+            ></i>
+          </dt>
+          <dd id="faq-4" class="text-lg font-light mt-6 hidden">
+            <p>
+              To manipulate an element's attribute, use setAttribute(),
+              getAttribute(), or direct property access. For styles, modify the
+              style property.
+            </p>
+          </dd>
+        </div>
+      </div>
+    </div>
+    <script src="/js/script.js"></script>
+  </body>
 </html>
