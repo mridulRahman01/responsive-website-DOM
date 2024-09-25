@@ -1,4 +1,10 @@
-document.getElementById("");
+document.getElementById("history-btn").addEventListener("click", function () {
+  showSectionById("history-container");
+});
+
+document.getElementById("donation-btn").addEventListener("click", function () {
+  showSectionById("donation-form");
+});
 
 document
   .getElementById("donation-button")
@@ -23,6 +29,16 @@ document
           newMainBalance.toFixed(2) + " BDT";
 
         document.getElementById("donation-money").value = "";
+        const historyItem = document.createElement("div");
+        historyItem.className =
+          "border-2 p-3 rounded-lg mt-[20px] mb-[20px] lg:w-[1000px] lg:ml-[350px]";
+
+        historyItem.innerHTML = `
+<p> ${newDonationBalance} Taka is donated for Flood Relief in Feni,Bangladesh </p>
+<p>Date:- ${new Date().toString()}</p>
+`;
+        const historyContainer = document.getElementById("history-container");
+        historyContainer.insertBefore(historyItem, historyContainer.firstChild);
       } else {
         alert("Donation amount exceeds available balance.");
       }
@@ -54,6 +70,16 @@ document
           newMainBalance.toFixed(2) + " BDT";
 
         document.getElementById("donation-money1").value = "";
+        const historyItem = document.createElement("div");
+        historyItem.className =
+          " p-3 rounded-lg border-2 mb-[20px] mt-[20px] lg:w-[1000px] lg:ml-[350px]";
+
+        historyItem.innerHTML = `
+<p> ${newDonationBalance} Taka is donated for Flood Relief in Feni,Bangladesh </p>
+<p>Date:- ${new Date().toString()}</p>
+`;
+        const historyContainer = document.getElementById("history-container");
+        historyContainer.insertBefore(historyItem, historyContainer.firstChild);
       } else {
         alert("Donation amount exceeds available balance.");
       }
@@ -61,39 +87,7 @@ document
       alert("Please enter a valid donation amount.");
     }
   });
-
-// document
-//   .getElementById("donation-button2")
-//   .addEventListener("click", function () {
-//     const addMoney = document.getElementById("donation-money2").value;
-//     const addMoneyNumber = parseFloat(addMoney);
-//     if (!isNaN(addMoneyNumber) && addMoneyNumber > 0) {
-//       const balance = document.getElementById("balance-2").innerText;
-//       const balanceNumber = parseFloat(balance);
-//       const newBalance = balanceNumber + addMoneyNumber;
-//       document.getElementById("balance-2").innerText = newBalance;
-//       document.getElementById("balance-2").innerText =
-//         newBalance.toFixed(2) + " BDT";
-//         if (addMoneyNumber <= mainBalanceNumber) {
-//       const mainBalance = document.getElementById("main-money").innerText;
-//       const mainBalanceNumber = parseFloat(mainBalance);
-//       const newMainBalance = mainBalanceNumber - newBalance;
-//       document.getElementById("main-money").innerText = newMainBalance;
-//       document.getElementById("main-money").innerText =
-//         newMainBalance.toFixed(2) + " BDT";
-//         document.getElementById("donation-money2").value = "";
-//     } else  {
-//       alert("Donation amount exceeds available balance.");
-//     }
-//    else {
-//     alert("Please enter a valid donation amount.");
-//   }
-// }
-//     // } else {
-//     //   alert("Opps.Failed to add money.");
-//     // }
-//   });
-
+let newDonationBalance;
 document
   .getElementById("donation-button2")
   .addEventListener("click", function () {
@@ -108,7 +102,7 @@ document
         const donationBalance = document.getElementById("balance-2").innerText;
         const donationBalanceNumber = parseFloat(donationBalance);
 
-        const newDonationBalance = donationBalanceNumber + addMoneyNumber;
+        newDonationBalance = donationBalanceNumber + addMoneyNumber;
         const newMainBalance = mainBalanceNumber - addMoneyNumber;
 
         document.getElementById("balance-2").innerText =
@@ -117,6 +111,16 @@ document
           newMainBalance.toFixed(2) + " BDT";
 
         document.getElementById("donation-money2").value = "";
+        const historyItem = document.createElement("div");
+        historyItem.className =
+          " p-3 rounded-lg border-2 mb-[20px] mt-[20px] lg:w-[1000px] lg:ml-[350px] items-center ";
+
+        historyItem.innerHTML = `
+<p> ${newDonationBalance} Taka is donated for Aid for Injured in the Quota Movement,Bangladesh </p>
+<p>Date:- ${new Date().toString()}</p>
+`;
+        const historyContainer = document.getElementById("history-container");
+        historyContainer.insertBefore(historyItem, historyContainer.firstChild);
       } else {
         alert("Donation amount exceeds available balance.");
       }
@@ -125,23 +129,14 @@ document
     }
   });
 
-// document
-//   .getElementById("donation-button")
-//   .addEventListener("click", function () {
-//     const addMoney = document.getElementById("donation-money").value;
-//     const addMoneyNumber = parseFloat(addMoney);
+const historyButton = document.getElementById("history-btn");
+const donationButton = document.getElementById("donation-btn");
+historyButton.addEventListener("click", function () {
+  historyButton.classList.add("bg-lime-400");
 
-//     if (!isNaN(addMoneyNumber) && addMoneyNumber > 0) {
-//       const balanceElement = document.getElementById("balance");
-//       const balanceNumber = parseFloat(balanceElement.innerText);
-//       const donationElement = document.getElementById("donation-amount");
-//       const donationTotal = parseFloat(donationElement.innerText);
-//       const newBalance = balanceNumber - addMoneyNumber;
-//       const newDonationTotal = donationTotal + addMoneyNumber;
-//       //   balanceElement.innerText = newBalance.toFixed(2) + " BDT";
-//       //   donationElement.innerText = newDonationTotal.toFixed(2) + " BDT";
-//       document.getElementById("donation-money").value = "";
-//     } else {
-//       alert("Please enter a valid donation amount.");
-//     }
-//   });
+  donationButton.classList.remove("bg-lime-400");
+  donationButton.addEventListener("click", function () {
+    donationButton.classList.add("bg-lime-400");
+    historyButton.classList.remove("bg-lime-400");
+  });
+});
